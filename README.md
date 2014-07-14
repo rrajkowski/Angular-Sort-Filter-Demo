@@ -1,10 +1,11 @@
 Angular-Sort-Filter-Demo
 ========================
 
-## Simple Angular Demo of filter by last name and table sort for all columns.
-# JSON data comes from test-data.json via $http.get
+## Simple AngularJS Demo
+ * Use of filter directive and table sort for all columns.
+* JSON data comes from test-data.json via $http.get
 
-## Prerequisites USED
+## Frameworks USED
 * Jquery
 * AngularJS
 * Bootstrap
