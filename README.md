@@ -1,5 +1,7 @@
 Angular-Sort-Filter-Demo
 ========================
+[Working Demo:](http://sandbox.rubenrajkowski.com/angularJS/)
+
 
 ## Simple AngularJS Demo
  * Use of filter directive and table sort for all columns.
