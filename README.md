@@ -5,7 +5,7 @@
 
 #### Simple AngularJS Demo
  * Use of filter directive and table sort for all columns.
-* JSON data comes from test-data.json via $http.get
+ * JSON data comes from test-data.json via $http.get
 
 #### Frameworks USED
 * Jquery
