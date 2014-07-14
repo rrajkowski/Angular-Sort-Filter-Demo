@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Sort</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="orderByEmployee">
+<h1>Angular Test - Sort & Filter <Employees></Employees></h1>
+<hr/>
+<div ng-controller="EmployeeController">
+<div class="btn-group" data-ng-class="{open: open}">
+    <button class="btn">Filter by Last Name</button>
+    <button class="btn dropdown-toggle" data-ng-click="open=!open"><span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+        <li><a data-ng-click="selectedName=[];"><i class="icon-remove-sign"></i>  Uncheck All</a></li>
+        <li class="divider"></li>
+        <li data-ng-repeat="name in nameList">
+            <a class="link" data-ng-click="setSelectedName()">{{name.last}}<span data-ng-class="isChecked(name.last)"></span></a>
+        </li>
+    </ul>
+</div>
+<table class="employees table table-hover table-striped">
+    <tr>
+        <th style="width:10%">#</th>
+        <th><a href="" ng-click="predicate = 'person.firstName'; reverse=false">First Name</a>
+            (<a href="" ng-click="predicate = '-person.firstName'; reverse=false">^</a>)</th>
+        <th><a href="" ng-click="predicate = 'person.lastName'; reverse=!reverse">Last Name</a></th>
+        <th><a href="" ng-click="predicate = 'person.sex'; reverse=!reverse">Sex</a></th>
+        <th><a href="" ng-click="predicate = 'person.age'; reverse=!reverse">Age</a></th>
+    </tr>
+    <tr data-ng-repeat="person in people | nameFilter:selectedName | orderBy:predicate:reverse">
+        <td>{{$index + 1}}</td>
+        <td>{{person.person.firstName}}</td>
+        <td>{{person.person.lastName}}</td>
+        <td>{{person.person.sex}}</td>
+        <td>{{person.person.age}}</td>
+    </tr>
+</table>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/main.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

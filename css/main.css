@@ -1,0 +1,10 @@
+
+.employees{}
+.employees td{
+    color:#000000;
+    font-size: 1em;
+}
+
+.link{
+    cursor: pointer;
+}
