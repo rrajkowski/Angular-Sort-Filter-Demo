@@ -1,6 +1,7 @@
 ## Angular-Sort-Filter-Demo
-========================
-[Working Demo](http://sandbox.rubenrajkowski.com/angularJS/)
+==============
+[Working Demo](http://rubenrajkowski.com/angular-sort-filter/)
+==============
 
 
 #### Simple AngularJS Demo
